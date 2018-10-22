@@ -3,7 +3,7 @@
 
 This repository is a fork of [dichotomies/proxy-nca](https://github.com/dichotomies/proxy-nca), which contains a PyTorch implementation of [`No Fuss Distance Metric Learning using Proxies`](https://arxiv.org/pdf/1703.07464.pdf) as introduced by Google Research.
 
-The fork adds training for a second dataset (UPMC-G20 containing 20 food categories with 100 images per category)
+The fork adds training for a second dataset (UPMC-G20 containing 20 food categories with 100 images per category).
 
 The same parameters were used as described in the paper, except for the optimizer. In particular, the size of the embedding and batches equals 64 and 32 respectively. Also, [BN-Inception](http://arxiv.org/abs/1502.03167) is used and trained with random resized crop and horizontal flip and evaluated with resized center crop. 
 
@@ -11,7 +11,9 @@ The [PyTorch BN-Inception model](https://github.com/Cadene/pretrained-models.pyt
 
 # Training with UPMC-G20
 
-You need Python3 and minimum PyTorch 0.4.1 to run the code via the following command: `python3 train.py`. This will download the UPMC-G20 dataset automatically and perform training for 20 epochs.
+You need Python3 and minimum PyTorch 0.4.1 to run the code via the following command: `python3 train.py`. This will download the [UPMC-G20 dataset](http://visiir.lip6.fr/) automatically and perform training for 20 epochs.
+
+Training takes about 8 minutes on a NVIDIA Quadro P4000 
 
 | Metric |   Results  |
 | ------ | ---------- |
