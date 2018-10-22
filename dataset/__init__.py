@@ -1,2 +1,2 @@
 
-from .cub import Birds
+from .data import Data
